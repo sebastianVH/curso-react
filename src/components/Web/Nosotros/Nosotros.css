@@ -1,0 +1,18 @@
+
+
+.nosotros{
+    display: grid;
+    /*vamos a indicar que es en forma de FILA*/
+    grid-template-columns: 50vw 1fr;
+    padding: 0 10px;
+    align-items: center;
+}
+
+.nosotros-img{
+    width: 50vw;
+}
+
+.nosotros-text{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1.8rem;
+}

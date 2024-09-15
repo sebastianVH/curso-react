@@ -1,0 +1,14 @@
+.tabla{
+
+    border-collapse: collapse;
+    width: 100%;
+    border-color: rgb(0, 0, 0);
+    border-style: solid;
+    border-width: 1px;
+    text-align: center;
+
+}
+
+.filas{
+    border: 1px solid rgba(0, 0, 0, 0.737);
+}

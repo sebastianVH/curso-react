@@ -1,0 +1,31 @@
+
+
+.producto-img{
+    width: 300px;
+    object-fit: contain;
+}
+
+.info-producto{
+    border: 2px solid black ;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 40%;
+}
+
+.card-info{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-button-quitar{
+    color: rgb(255, 255, 255);
+    background-color: rgb(255, 0, 0);
+    border-radius: 5px;
+    margin: 0 auto;
+    margin-right: 5px;
+}

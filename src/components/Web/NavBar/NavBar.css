@@ -1,0 +1,49 @@
+
+
+.container{
+    background-image: url('./banner.jpg');
+    height: 250px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center 75%;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-around;
+    align-items: start;
+}
+
+.navlink {
+    border-color: rgb(255, 255, 255);
+    padding: 5px;
+    font-size: 20px;
+    color: rgb(255, 255, 255);
+    -webkit-text-stroke-width: 0.3px ;
+    -webkit-text-stroke-color: rgb(0, 0, 0);
+    font-weight:400;
+}
+
+.navlink:hover {
+    color: rgb(255, 0, 0);
+    text-decoration:underline;
+    -webkit-text-stroke-width: 0px ;
+}
+
+.titulo-principal {
+    color: rgb(255, 255, 255);
+    text-align: center;
+    font-size: 50px;
+    /*vamos a agregarle un BORDE al texto*/
+    -webkit-text-stroke-width: 1px ;
+    -webkit-text-stroke-color: rgb(0, 0, 0);
+    text-shadow: 2px 2px rgba(0, 0, 0, 0.347);
+}
+
+.sub-titulo {
+    color: rgb(255, 255, 255);
+    text-align: center;
+    -webkit-text-stroke-width: 1px ;
+    -webkit-text-stroke-color: rgb(0, 0, 0);
+    text-shadow: 2px 2px rgba(0, 0, 0, 0.347)
+}

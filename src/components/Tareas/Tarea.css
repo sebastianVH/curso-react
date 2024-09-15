@@ -1,0 +1,20 @@
+.boton-ejemplo{
+    margin: 10px;
+    padding: 10px 30px;
+    font-size: 10px;
+    text-align: center;
+    cursor: pointer;
+    outline: none;
+    color: #000000;
+    border: 1px solid rgb(0, 0, 0);
+    border-radius: 15px;
+}
+
+.boton-completo{
+    background-color: green;
+}
+
+.boton-completar{
+    background-color: rgba(240, 248, 5, 0.966);
+    cursor: pointer;
+}

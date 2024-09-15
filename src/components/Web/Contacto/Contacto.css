@@ -1,0 +1,33 @@
+
+.formulario-contacto{
+    display: flex;
+    flex-direction: column;
+    align-items:stretch;
+    width: 25vw;
+    text-align: center;
+}
+
+.contenedor-contacto{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 50px;
+}
+
+.boton-enviar{
+    margin-top: 10px;
+    background-color: green;
+    color: aliceblue;
+}
+
+.form-error{
+    color: red;
+    text-align: left;
+    font-size: small;
+}
+
+.form-input{
+    background-color: white;
+    padding-block: 1px;
+    padding-inline: 5px;
+}

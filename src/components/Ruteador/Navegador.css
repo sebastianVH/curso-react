@@ -1,0 +1,13 @@
+.navegador{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: rgb(136, 135, 135);
+    color: white;
+    height: 50px;
+}
+
+.rutas{
+    text-decoration: none;
+    color: white;
+}
