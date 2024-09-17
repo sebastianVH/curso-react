@@ -1,0 +1,17 @@
+{
+  "name": "back",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "backend de nuestra app",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "author": "seba",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.21.0"
+  }
+}
