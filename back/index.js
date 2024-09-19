@@ -13,6 +13,8 @@ app.get('/',(req,res)=>{
     res.send("Te envio esta respuesta desde el servidor")
 })
 
+app.get('/saludo',(req,res)=> res.send("Hola mundo!!!"))
+
 //-4 levantamos el servidor para que corra en el puerto 3000
 app.listen(PORT,()=>{ console.log(`Servidor corriendo en el puerto ${PORT}`);
 })
