@@ -18,22 +18,24 @@ app.listen(PORT ,()=> {
 app.get('/',(req,res)=> res.send("El restaurant esta esperando tus pedidos"))
 
 //Vamos a simular una BASE DE DATOS, utilizando simplemente un array. De entrada, voy a crear un plato, simulando que ya hay un pedido en la cocina
-export const pedidos = [
-    {
-    id: 1,
-    plato: "Milanesa de carne",
-    guarnicion: "pure de papa",
-    bebida:"Gaseosa"
-    },
-    {
-    id: 2,
-    plato: "Ojo de Bife",
-    guarnicion: "Ensalada",
-    bebida:"Agua Saborizada manzana"
-    }
-]
+export const pedidos = {
+    pedidos:[
+        {
+        id: 1,
+        plato: "Milanesa de carne",
+        guarnicion: "pure de papa",
+        bebida:"Gaseosa"
+        },
+        {
+        id: 2,
+        plato: "Ojo de Bife",
+        guarnicion: "Ensalada",
+        bebida:"Agua Saborizada manzana"
+        }
+    ]
+}
 
-//GET: sirve para devolver datos. Su funcion principal es LA BUSQUEDA Y DEVOLUCION DE INFORMACION
+//GET: sirve para OBTENER datos. Su funcion principal es LA BUSQUEDA Y DEVOLUCION DE INFORMACION
 app.get('/verpedidos',listarpedidos)
 
 //POST: sirve para CREAR NUEVOS DATOS (crear recursos). Su funcion es CREAR ALGO y luego devolver si se pudo crear o no dicho recurso

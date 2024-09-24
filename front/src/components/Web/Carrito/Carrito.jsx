@@ -1,5 +1,9 @@
-import { useMemo, useState } from 'react'
+import { useEffect, useMemo, useState } from 'react'
 import './Carrito.css'
+import { Button } from '@mui/material'
+import CheckCircleOutlinedIcon from '@mui/icons-material/CheckCircleOutlined';
+import axios from 'axios';
+import Swal from 'sweetalert2'
 
 
 export default function Carrito() {
@@ -17,6 +21,27 @@ export default function Carrito() {
         localStorage.setItem("carrito",JSON.stringify(nuevoCarrito))
         setCarrito(nuevoCarrito)
     }
+
+    const finalizarCompra = async () => { 
+        //vamos a mandar los datos de nuestra compra al backend
+        const productos_carrito = JSON.parse(localStorage.getItem("carrito"))
+        //para evitar mandar al back un carrito vacio, chequeamos que no se encuentre vacio y devolvemos un mensaje de info
+        if(!productos_carrito){
+            return Swal.fire("Atencion","Debe agregar por lo menos un producto al carrito","info")
+        }
+        try {
+            const {data} = await axios.post('http://localhost:3000/finalizarcompra',{productos_carrito,total})
+            Swal.fire("Compra Finalizada",data.message,"success")
+            localStorage.removeItem("carrito")
+            setCarrito([])
+             
+        } catch (error) {
+            Swal.fire("Ups! Ha ocurrido un error",error.response.data.message,"error")
+        }
+    }
+
+    useEffect(() => {
+    }, [carrito])
 
     return (
         <div className='carrito'>
@@ -38,6 +63,7 @@ export default function Carrito() {
                 )
             })}
             <h2>Total: ${total} </h2>
+            <Button onClick={finalizarCompra} variant='contained' color='success' endIcon={<CheckCircleOutlinedIcon/>} >Finalizar compra</Button>
         </div>
     )
 
